@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //STORAGE
 import UseGetItem from '../../hooks/useGetItem';
-import {setItem} from '../../utils/storage';
+import {setItem, removeItem} from '../../utils/storage';
 //TYPES
 import {AppStackParamList} from '../../types/navigation';
 //SCREENS
@@ -20,13 +20,13 @@ const AppNavigator = () => {
 
   // check if this the first time that user Launch the App if so Display OnBoardingScreen
   useEffect(() => {
-    if (alreadyLunched === null) {
+    if (alreadyLunched === null || alreadyLunched === undefined) {
       setIsFirstLaunch(true);
       setItem('isAlreadyLunched', 'Yes user has Launched!!');
     } else {
       setIsFirstLaunch(false);
     }
-  }, [alreadyLunched]);
+  }, [alreadyLunched, isFirstLaunch]);
 
   return (
     <NavigationContainer>

@@ -28,7 +28,7 @@ const OnBoardingScreen: React.FC<OnBoardingProps> = ({navigation}) => {
               <Image
                 style={styles.image}
                 resizeMode="contain"
-                source={require('../../assets/images/slide1.png')}
+                source={require('@assets/images/slide1.png')}
               />
             ),
             title: 'Onboarding',
@@ -40,7 +40,7 @@ const OnBoardingScreen: React.FC<OnBoardingProps> = ({navigation}) => {
               <Image
                 style={styles.image}
                 resizeMode="contain"
-                source={require('../../assets/images/slide2.png')}
+                source={require('@assets/images/slide2.png')}
               />
             ),
             title: 'Onboarding',
@@ -52,7 +52,7 @@ const OnBoardingScreen: React.FC<OnBoardingProps> = ({navigation}) => {
               <Image
                 style={styles.image}
                 resizeMode="contain"
-                source={require('../../assets/images/slide3.png')}
+                source={require('@assets/images/slide3.png')}
               />
             ),
             title: 'Onboarding',

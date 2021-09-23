@@ -3,20 +3,20 @@ import React, {useState, useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //STORAGE
-import UseGetItem from '../../hooks/useGetItem';
-import {setItem, removeItem} from '../../utils/storage';
+import UseGetItem from '@hooks/useGetItem';
+import {setItem} from '@utils/storage';
 //TYPES
 import {AppStackParamList} from '../../types/navigation';
 //SCREENS
-import HomeScreen from '../../screen/HomeScreen';
-import OnBoardingScreen from '../../screen/OnBoardingScreen/index';
+import HomeScreen from '@screen/HomeScreen';
+import OnBoardingScreen from '@screen/OnBoardingScreen/index';
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
 const AppNavigator = () => {
   const [isFirstLaunch, setIsFirstLaunch] = useState<boolean>(true);
   let {item: alreadyLunched} = UseGetItem('isAlreadyLunched');
-  console.log(alreadyLunched);
+  console.log(alreadyLunched, 'alreadyLunched');
 
   // check if this the first time that user Launch the App if so Display OnBoardingScreen
   useEffect(() => {

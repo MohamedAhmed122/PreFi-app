@@ -1,5 +1,9 @@
 export type NO_PARAMS = undefined;
 
+export type AppBoardingParamList = {
+  OnBoardingScreen: NO_PARAMS;
+};
+
 export type AppStackParamList = {
   Home: NO_PARAMS;
   OnBoarding: NO_PARAMS;

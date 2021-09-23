@@ -3,7 +3,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useEffect, useState} from 'react';
 
-export default function UseGetItem(key: string) {
+export default function useGetItem(key: string) {
   const [item, setItem] = useState<string>();
   const [error, setError] = useState();
 

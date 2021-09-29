@@ -24,7 +24,6 @@ const AppNavigator = () => {
   console.log(isFirstLaunch, 'isFirstLaunch');
 
   return (
-    // <NavigationContainer>
     <Stack.Navigator
       screenOptions={{
         headerLeft: () => <HeaderLeft />,
@@ -40,15 +39,10 @@ const AppNavigator = () => {
           options={{headerShown: false}}
         />
       )}
-      <Stack.Screen
-        name={AppNavigationParams.Home}
-        component={HomeScreen}
-        // options={{headerShown: false}}
-      />
+      <Stack.Screen name={AppNavigationParams.Home} component={HomeScreen} />
       <Stack.Screen
         name={AppNavigationParams.AccountStack}
         component={AccountStack}
-        options={{headerShown: false}}
       />
       <Stack.Screen
         name={AppNavigationParams.Categories}
@@ -67,7 +61,6 @@ const AppNavigator = () => {
         component={SettingsStack}
       />
     </Stack.Navigator>
-    // </NavigationContainer>
   );
 };
 

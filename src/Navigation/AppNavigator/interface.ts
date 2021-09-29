@@ -2,6 +2,7 @@ import {SettingsStackParamList} from 'Navigation/SettingsStack/interface';
 import {NavigatorScreenParams, RouteProp} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {AccountStackParamList} from 'Navigation/AccountStack/interface';
+import {AppDraweParamsList} from 'Navigation/AppDrawer/interface';
 
 export type NO_PARAMS = undefined;
 
@@ -24,7 +25,7 @@ export type AppNavigationStackParamList = {
   [AppNavigationParams.Categories]: NO_PARAMS;
   [AppNavigationParams.AccountStack]: NavigatorScreenParams<AccountStackParamList>;
   [AppNavigationParams.SettingsStack]: NavigatorScreenParams<SettingsStackParamList>;
-  [AppNavigationParams.AppDrawer]: NO_PARAMS;
+  [AppNavigationParams.AppDrawer]: NavigatorScreenParams<AppDraweParamsList>;
 };
 
 export type RootNavigationProp<P extends AppNavigationParams> =

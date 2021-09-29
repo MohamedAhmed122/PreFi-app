@@ -1,11 +1,23 @@
+import {
+  AppNavigationParams,
+  RootNavigationProp,
+} from 'Navigation/AppNavigator/interface';
+import {Stacks} from 'Navigation/Stacks';
 import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import {Pressable, Text, SafeAreaView} from 'react-native';
 // import styles from './styles';
+interface AccountProps {
+  navigation: RootNavigationProp<AppNavigationParams.AccountStack>;
+}
+const AccountScreen: React.FC<AccountProps> = ({navigation}) => {
+  const handlePress = () => navigation.navigate(Stacks.AppNavigator.Home);
 
-const AccountScreen: React.FC = () => {
   return (
     <SafeAreaView>
-      <Text> AccountScreen</Text>
+      <Text>Account Screen</Text>
+      <Pressable onPress={handlePress}>
+        <Text> Home</Text>
+      </Pressable>
     </SafeAreaView>
   );
 };

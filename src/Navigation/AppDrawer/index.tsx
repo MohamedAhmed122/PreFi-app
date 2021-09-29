@@ -18,10 +18,10 @@ export const DrawerNavigator = () => {
     <NavigationContainer ref={navigationRef}>
       <Drawer.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName={AppNavigationParams.Home}
+        initialRouteName={AppNavigationParams.AppDrawer}
         drawerContent={props => <CustomDrawerContent {...props} />}>
         <Drawer.Screen
-          name={AppNavigationParams.Home}
+          name={AppNavigationParams.AppDrawer}
           component={AppNavigator}
           options={{
             drawerIcon: ({color, size}) => {

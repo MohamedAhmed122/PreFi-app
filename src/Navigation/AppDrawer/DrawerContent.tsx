@@ -31,8 +31,21 @@ export const CustomDrawerContent = (props: DrawerContentComponentProps) => {
             <MaterialCommunityIcon name="close-box" color={color} size={size} />
           );
         }}
+        onPress={() => props.navigation.navigate(Stacks.AppNavigator.Home)}
+      />
+      <DrawerItem
+        // inactiveBackgroundColor={Colors.gray}
+        activeBackgroundColor={Colors.green}
+        label="Account"
+        icon={({color, size}) => {
+          return (
+            <MaterialCommunityIcon name="close-box" color={color} size={size} />
+          );
+        }}
         onPress={() =>
-          props.navigation.navigate(Stacks.AppNavigator.Categories)
+          props.navigation.navigate(Stacks.AppNavigator.AccountStack, {
+            screen: Stacks.AccountStack.Account,
+          })
         }
       />
     </DrawerContentScrollView>

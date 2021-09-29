@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import {DrawerNavigator} from 'Navigation/DrawerNavigator';
+import {DrawerNavigator} from 'Navigation/AppDrawer';
 import React from 'react';
 
 import AppNavigator from './src/Navigation/AppNavigator';

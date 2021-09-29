@@ -8,12 +8,14 @@ import {
   AppNavigationStackParamList,
 } from 'Navigation/AppNavigator/interface';
 import AppNavigator from 'Navigation/AppNavigator';
+import {createNavigationContainerRef} from '@react-navigation/core';
 
 const Drawer = createDrawerNavigator<AppNavigationStackParamList>();
+export const navigationRef = createNavigationContainerRef();
 
 export const DrawerNavigator = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Drawer.Navigator
         screenOptions={{headerShown: false}}
         initialRouteName={AppNavigationParams.Home}

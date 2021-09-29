@@ -1,20 +1,14 @@
-import {useNavigation} from '@react-navigation/native';
-import {
-  DrawerParams,
-  UserDrawerNavigationProp,
-} from 'Navigation/DrawerNavigator/interface';
-import {Stacks} from 'Navigation/Stacks';
 import React from 'react';
+import {DrawerActions} from '@react-navigation/native';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {Colors} from 'styles';
 
-interface HeaderProps {
-  navigation: UserDrawerNavigationProp<DrawerParams.AppNavigator>;
-}
+import {Colors} from 'styles';
+import {navigationRef} from 'Navigation/AppDrawer';
+
+interface HeaderProps {}
 export const HeaderLeft: React.FC = ({}) => {
-  const {navigation} = useNavigation<HeaderProps>();
-  const handlePress = () => navigation.openDrawer();
+  const handlePress = () => navigationRef.dispatch(DrawerActions.openDrawer());
   return (
     <TouchableOpacity onPress={handlePress}>
       <MaterialCommunityIcons

@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
 // import styles from './styles';
 
 const AccountScreen: React.FC = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text> AccountScreen</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 
